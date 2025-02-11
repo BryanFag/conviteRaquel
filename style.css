@@ -1,0 +1,105 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+.container {
+  position: relative;
+  animation: fadeIn 2s ease-in-out, float 4s ease-in-out infinite;
+}
+
+.convite {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+  animation: pulse 2s infinite alternate, rotate 6s infinite linear;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  from {
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+  }
+  to {
+      box-shadow: 0 0 25px rgba(255, 105, 180, 1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}
+
+/* Adicionando um efeito de brilho ao fundo */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 10.01%);
+  background-size: 20px 20px;
+  animation: sparkle 3s infinite linear;
+}
+
+@keyframes sparkle {
+  from {
+      background-position: 0 0;
+  }
+  to {
+      background-position: 20px 20px;
+  }
+}
+
+        /* Estilos adicionais para o botão */
+        .confirmar-btn {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff69b4;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite alternate;
+            transition: background-color 0.3s ease;
+        }
+        .confirmar-btn:hover {
+            background-color: #ff1493;
+        }
+        @keyframes pulse {
+            from {
+                box-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+            }
+            to {
+                box-shadow: 0 0 25px rgba(255, 105, 180, 1);
+            }
+        }
