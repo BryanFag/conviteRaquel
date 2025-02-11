@@ -96,6 +96,35 @@ body::before {
   background-color: #ff1493;
 }
 
+.nok-btn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000000;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite alternate;
+  transition: background-color 0.3s ease;
+}
+.nok-btn:hover {
+  background-color: #5e5e5e;
+}
+
+.obs {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #333333;
+  font-size: 14px;
+  font-weight: bold;
+}
 
 @media (max-width: 768px) {
   .convite {
@@ -105,8 +134,14 @@ body::before {
   .confirmar-btn {
       font-size: 16px;
       padding: 12px 24px;
-      top: 75%;
+      top: 70%;
   }
+
+  .nok-btn {
+    font-size: 16px;
+    padding: 12px 24px;
+    top: 80%;
+}
 }
 
 @media (max-width: 480px) {
@@ -117,6 +152,12 @@ body::before {
   .confirmar-btn {
       font-size: 14px;
       padding: 10px 20px;
-      top: 80%;
+      top: 70%;
   }
+
+  .nok-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+    top: 80%;
+}
 }
