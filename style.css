@@ -52,7 +52,7 @@ body {
   }
 }
 
-/* Adicionando um efeito de brilho ao fundo */
+
 body::before {
   content: '';
   position: absolute;
@@ -74,32 +74,49 @@ body::before {
   }
 }
 
-        /* Estilos adicionais para o botão */
-        .confirmar-btn {
-            position: absolute;
-            top: 70%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #ff69b4;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            animation: pulse 2s infinite alternate;
-            transition: background-color 0.3s ease;
-        }
-        .confirmar-btn:hover {
-            background-color: #ff1493;
-        }
-        @keyframes pulse {
-            from {
-                box-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
-            }
-            to {
-                box-shadow: 0 0 25px rgba(255, 105, 180, 1);
-            }
-        }
+
+.confirmar-btn {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff69b4;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite alternate;
+  transition: background-color 0.3s ease;
+}
+.confirmar-btn:hover {
+  background-color: #ff1493;
+}
+
+
+@media (max-width: 768px) {
+  .convite {
+      width: 60%;
+  }
+
+  .confirmar-btn {
+      font-size: 16px;
+      padding: 12px 24px;
+      top: 75%;
+  }
+}
+
+@media (max-width: 480px) {
+  .convite {
+      width: 80%;
+  }
+
+  .confirmar-btn {
+      font-size: 14px;
+      padding: 10px 20px;
+      top: 80%;
+  }
+}
